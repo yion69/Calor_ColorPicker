@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#added-color::-webkit-scrollbar { 
+    display: none;
+    scrollbar-width: none;
+}
+
+svg {
+    pointer-events: none;
+}
+
+.card:active {
+    color: #A2B29F;
+}
+.btn:active {
+    color: #BDD2B6;
+    background-color: #627254;
+}
+
+/* Display-ColorValues */
+#input-text-hex {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding-top: 2px;
+}
+#input-text-rgb {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding-top: 2px;
+}
+
+#input-text-hsl {
+    display: none;
+    margin: 0;
+    width: 100%;
+    padding-top: 2px;
+}
+#color-searchbar {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #input-text-rgb{
+        display: block;
+    }
+    #input-text-hsl{
+        display: block;
+    }
+    #color-searchbar {
+        display: block;
+    }
+}
+@media screen and (min-width: 1024px) {
+    #input-text-rgb{
+        display: block;
+        width: 100%;
+        margin: 0 0 0 5px;
+        padding-top: 2px;
+    }
+    #input-text-hsl{
+        display: block;
+        width: 100%;
+        margin: 0 0 0 5px;
+        padding-top: 2px;
+    }
+    #color-searchbar {
+        display: block;
+    }
+    #color-searchbar:focus-visible{
+        outline: solid 2px #A2B29F;
+    }
+}
+
+@media (hover: hover) and (pointer: fine){
+    .card:hover {
+        transform: scale(1.20);
+        color: #A2B29F;
+        transition: transform 0.3s, color 0.3s;
+    }
+    .btn:hover {
+        transform: scale(1.15);
+        color: #BDD2B6;
+        background-color: #748763;
+        transition: transform 0.5s, color 0.3s;
+    }
+    .btn:hover svg:not(.svg-refresh) {
+        fill: #BDD2B6;
+        transition: fill 0.5s;
+    }
+}
+
+/* SearchBar Component */
+.searchbar{
+    visibility: hidden;
+}
+#value-input-hex {
+    display: block;
+}
+#value-input-rgb {
+    display: none;
+}
+#value-input-hsl {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    #value-input-hex {
+        display: block;
+    }
+    #value-input-rgb {
+        display: block;
+    }
+    #value-input-hsl {
+        display: block;
+    }   
+}
+@media screen and (min-width: 1024px) {
+    #value-input-hex {
+        display: block;
+    }
+    #value-input-rgb {
+        display: block;
+    }
+    #value-input-hsl {
+        display: block;
+    }   
+}
