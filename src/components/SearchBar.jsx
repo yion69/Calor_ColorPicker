@@ -56,7 +56,7 @@ function SearchBar (prop) {
 
     function removeSearchBar(){
         let searchbar = document.querySelector('.searchbar');
-        searchbar.style.visibility = 'hidden';  
+        searchbar.style.display = 'none';  
     }
     
     function resetInputBox(){
@@ -97,47 +97,47 @@ function SearchBar (prop) {
     }
 
     return(
-        <div className="searchbar fixed flex place-content-center place-items-center h-dvh w-full top-0" style={{backgroundColor: "rgba(0,0,0,0.7)"}}>
-            <div className="flex flex-col h-[15%] w-[90%] mx-auto bg-matcha-500 rounded-lg">
+        <div className="searchbar z-20 fixed flex place-items-center -top-32 " style={{backgroundColor: "rgba(0,0,0,0.7)"}}>
+            <div className="flex flex-col h-[15%] w-[90%] mt-10 mx-auto bg-colors-primary border-2 border-colors-accent rounded-lg">
                 <button onClick={removeSearchBar}>
                     <XCircle 
                         size={25}
                         className="ml-auto mr-3 mt-2" 
                     />
                 </button>
-                <h3 className="-mt-2 text-center font-semibold text-matcha-200 font-mono">Search color</h3>
+                <h3 className="-mt-2 text-center font-semibold text-colors-text font-mono">Search color</h3>
                 <div className="flex w-11/12 h-12 mt-3 p-1">
                     <input
                         type="text"
                         id="value-input-hex"
                         onChange={handleSearchBarInput}
                         placeholder="eg.#FFFFFF" 
-                        className="ml-6 p-5 h-10 w-9/12 font-semibold text-xl bg-matcha-300 rounded-md rounded-r-none placeholder:text-slate-500 placeholder:italic placeholder:font-normal shadow-xl"
+                        className="ml-6 p-5 h-10 w-9/12 font-semibold text-xl bg-colors-secondary border-2 border-colors-accent rounded-md rounded-r-none placeholder:text-colors-text2 placeholder:font-light shadow-xl"
                     />
                     <input
                         type="text"
                         id="value-input-rgb"
                         onChange={handleSearchBarInput}
                         placeholder="eg.255, 255, 255" 
-                        className="ml-6 p-5 h-10 w-9/12 font-semibold text-xl bg-matcha-300 rounded-md rounded-r-none placeholder:text-slate-500 placeholder:italic placeholder:font-normal shadow-xl"
+                        className="ml-6 p-5 h-10 w-9/12 font-semibold text-xl bg-colors-secondary border-2 border-colors-accent rounded-md rounded-r-none placeholder:text-colors-text2 placeholder:font-light shadow-xl"
                     />
                     <input
                         type="text"
                         id="value-input-hsl"
                         onChange={handleSearchBarInput}
                         placeholder="eg. 0° 0% 0%" 
-                        className="ml-6 p-5 h-10 w-9/12 font-semibold text-xl bg-matcha-300 rounded-md rounded-r-none placeholder:text-slate-500 placeholder:italic placeholder:font-normal shadow-xl"
+                        className="ml-6 p-5 h-10 w-9/12 font-semibold text-xl bg-colors-secondary border-2 border-colors-accent rounded-md rounded-r-none placeholder:text-colors-text2 placeholder:font-light shadow-xl"
                     />
                     <select 
                         id='selection' 
-                        className='h-10 w-14 my-auto text-xs font-bold bg-matcha-600 border-[1px] border-matcha-300'
+                        className='h-[43px] w-14 my-auto text-xs bg-colors-secondary text-colors-text2 font-normal border-2 border-l-0 border-colors-accent'
                         onChange={cycleSelectionValue}
                     >
                         <option value="hex">HEX</option>
                         <option value="rgb">RGB</option>
                         <option value="hsl">HSL</option>
                     </select>
-                    <button className="btn h-10 w-14 mx-0 bg-matcha-600 rounded-r-lg shadow-xl border-[1px] border-matcha-300" onClick={searchBtnFunctions} id='searchBtn'>
+                    <button className="btn h-[43px] w-14 mx-0 text-colors-text2 bg-colors-secondary rounded-r-lg shadow-xl border-2 border-l-0 border-colors-accent" onClick={searchBtnFunctions} id='searchBtn'>
                         <Search className="mx-auto"/>
                     </button>
                 </div>

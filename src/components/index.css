@@ -10,13 +10,21 @@
 svg {
     pointer-events: none;
 }
-
+.card {
+    color: #1c1917;
+    transform: scale(1);
+    transition: transform 0.3s, color 0.5s;
+}
 .card:active {
-    color: #A2B29F;
+    color: #b9b4b0;
+}
+.btn {
+    transform: scale(1);
+    transition: transform 0.5s;
 }
 .btn:active {
     color: #BDD2B6;
-    background-color: #627254;
+    background-color: #78716c;
 }
 
 /* Display-ColorValues */
@@ -71,31 +79,34 @@ svg {
         display: block;
     }
     #color-searchbar:focus-visible{
-        outline: solid 2px #A2B29F;
+        outline: solid 4px #78716c;
+        transition: outline 0.3s;
     }
 }
 
 @media (hover: hover) and (pointer: fine){
     .card:hover {
-        transform: scale(1.20);
-        color: #A2B29F;
+        transform: scale(1.2);
+        color: #b9b4b0;
         transition: transform 0.3s, color 0.3s;
     }
     .btn:hover {
-        transform: scale(1.15);
-        color: #BDD2B6;
-        background-color: #748763;
+        transform: scale(1.1);
+        color: #b9b4b0;
+        background-color: #78716c;
         transition: transform 0.5s, color 0.3s;
     }
     .btn:hover svg:not(.svg-refresh) {
-        fill: #BDD2B6;
+        fill: #b9b4b0;
         transition: fill 0.5s;
     }
 }
 
 /* SearchBar Component */
 .searchbar{
-    visibility: hidden;
+    display: none;
+    height: 119vh;
+    width: 100vw;
 }
 #value-input-hex {
     display: block;
@@ -127,4 +138,35 @@ svg {
     #value-input-hsl {
         display: block;
     }   
+}
+
+/* Color and Recent */
+
+.favourite-card {
+    display: block;
+}
+
+.recent-card {
+    display: none;
+}
+#recentBtn {
+    z-index: 0;
+    position: relative;
+}
+#favouriteBtn {
+    z-index: 0;
+    position: inherit;
+}
+
+/* Footer */
+.contact-btn:active {
+    color: #57534e;
+}
+@media (hover: hover) and (pointer: fine){
+    .contact-btn {
+        transition: transform 0.5s, color 0.3s;
+    }
+    .contact-btn:hover{
+        transform: translateY(-5px);
+    }
 }
