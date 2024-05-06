@@ -158,6 +158,36 @@ svg {
     position: inherit;
 }
 
+/* Random-Page */
+#random-recent-cards::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+
+#random-recent-cards::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #57534e;
+}
+
+#random-recent-cards::-webkit-scrollbar-thumb {
+    width: 5px;
+    margin: 0 auto;
+    height: 1px;
+    border-radius: 8px;
+    background-color: #b9b4b0;
+}
+#spinner {
+    display: none;
+}
+#recent {
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    #recent {
+        display: none; /* Hide the component on screens smaller than 768px */
+    }
+}
+
 /* Footer */
 .contact-btn:active {
     color: #57534e;

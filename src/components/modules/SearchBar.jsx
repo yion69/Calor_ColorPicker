@@ -1,6 +1,6 @@
 import React,{ useState } from 'react';
 import { Search,XCircle } from "lucide-react";
-import './index.css';
+import '../index.css';
 
 function SearchBar (prop) {
     let [searchBarColor, setSearchBarColor] = useState('#000000');

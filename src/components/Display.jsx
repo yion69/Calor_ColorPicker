@@ -1,7 +1,7 @@
     import React,{useEffect, useState} from 'react';
-    import Card from './Card';
-    import RecentCard from './RecentCard';
-    import SearchBar from './SearchBar';
+    import Card from './modules/Card';
+    import RecentCard from './modules/RecentCard';
+    import SearchBar from './modules/SearchBar';
     import { Star, Search, RotateCcw } from 'lucide-react';
     import './index.css';
 
@@ -201,9 +201,9 @@
         }
 
         return(
-            <div className='z-10 h-dvh lg:h-[73.6%] flex flex-col md:flex-col lg:flex-row bg-colors-background'>
-                <div className='w-11/12 md:w-6/12 lg:w-2/6 lg:mx-[250px] lg:mr-5 mx-auto my-5 md:my-auto lg:my-auto p-5 lg:p-10 h-[27rem] bg-colors-primary rounded-lg drop-shadow-lg border-2 border-colors-accent'>
-                    <div className='w-full h-4/6 mx-auto rounded-md border-colors-accent border-2' style={{backgroundColor: color}}></div>
+            <div className='z-10 min-h-dvh lg:min-h-[73.6%] lg:h-[73.6%] flex flex-col md:flex-col lg:flex-row bg-colors-background'>
+                <div className='w-11/12 md:w-6/12 lg:w-2/6 lg:mx-[250px] lg:mr-5 mx-auto my-5 md:my-auto lg:my-auto p-5 lg:p-10 min-h-[27rem] h-[35rem] lg:h-[27rem] bg-colors-primary rounded-lg drop-shadow-lg border-2 border-colors-accent'>
+                    <div className='w-full h-[75%] lg:h-4/6 mx-auto rounded-md border-colors-accent border-2' style={{backgroundColor: color}}></div>
                     <div className='flex place-content-center mt-3 mb-3 p-3 bg-colors-secondary bg-opacity-60 rounded-md'>
                         <p
                             type="text"
@@ -229,17 +229,20 @@
                             type="color" 
                             id='colorValue'
                             onChange={handleColorChange} 
-                            className='absolute left-10 lg:static w-[4.5rem] lg:w-20 h-[31px]  ml-auto mr-auto md:mr-0 lg:-mr-1 px-1 border-2 border-colors-accent rounded-md bg-colors-secondary' //ml-[53px]
+                            className='w-24 lg:w-20 h-[32px] mr-1 md:mr-0 lg:-mr-1 px-1 border-2 border-colors-accent rounded-md bg-colors-secondary' //ml-[53px]
                         />
-                        <div className='w-[44%] ml-auto mr-1'>
-                            <input
-                                type="text"
-                                id='color-searchbar'
-                                onChange={handleSearchBar}
-                                className='w-full h-[30px] mt-[1px] px-3 rounded-md bg-colors-secondary border-2 border-colors-accent placeholder:text-colors-text placeholder:font-light font-light text-colors-text2'
-                                placeholder='eg.#FFFFFF'
-                            />
-                        </div>
+                        { window.screen.width > 500 ?
+                            <div className='w-[44%] ml-auto mr-1'>
+                                <input
+                                    type="text"
+                                    id='color-searchbar'
+                                    onChange={handleSearchBar}
+                                    className='w-full h-[30px] mt-[1px] px-3 rounded-md bg-colors-secondary border-2 border-colors-accent placeholder:text-colors-text placeholder:font-light font-light text-colors-text2'
+                                    placeholder='eg.#FFFFFF'
+                                />
+                            </div> :
+                            null
+                        }
                         <button 
                             onClick={()=>searchBarDisplay()} 
                             className='btn h-8 w-24 lg:w-10 bg-colors-secondary border-2 border-colors-accent rounded-md text-colors-text2'>
@@ -262,11 +265,11 @@
                     </div>
                 </div>
 
-                <div className='favourite-card w-11/12 md:w-6/12 lg:w-2/6 lg:mx-0 mx-auto my-5 md:my-auto lg:my-auto p-5 lg:p-10 h-[23rem] lg:h-[27rem] bg-colors-primary rounded-lg shadow-2xl border-2 border-colors-accent'>
+                <div className='favourite-card w-11/12 md:w-6/12 lg:w-2/6 lg:mx-0 mx-auto my-5 md:my-auto lg:my-auto p-5 lg:p-10 min-h-[15rem] h-[30rem] lg:h-[27rem] bg-colors-primary rounded-lg shadow-2xl border-2 border-colors-accent'>
 
                     <h3 className='h-10 w-full mt-auto -mb-1 py-1 px-5 tracking-widest text-lg  text-colors-text2 font-light bg-colors-accent rounded-t-md'>Favourite
                     </h3>
-                    <div id='added-color' className='z-0 w-full h-[80%] lg:h-[87%] border-2 border-colors-accent rounded-md rounded-t-none overflow-y-scroll scroll-smooth bg-colors-secondary bg-opacity-80'>
+                    <div id='added-color' className='z-0 w-full h-[85%] lg:h-[87%] border-2 border-colors-accent rounded-md rounded-t-none overflow-y-scroll scroll-smooth bg-colors-secondary bg-opacity-80'>
                         {addedColor.map((e, index) => 
                             <Card
                                 key={index}
@@ -277,15 +280,15 @@
                         )}
                     </div>
 
-                    <button id='recentBtn' className='btn btnCard z-0 h-8 lg:h-8 w-24 lg:w-32 my-1 lg:my-2 ml-[35%] tracking-widest border-2 border-colors-accent rounded-md bg-colors-secondary text-colors-text2' onClick={cycleRecentAndFavourite}>
+                    <button id='recentBtn' className='btn btnCard z-0 min-h-10 lg:h-8 w-24 lg:w-32 my-1 ml-[35%] tracking-widest border-2 border-colors-accent rounded-md bg-colors-secondary text-colors-text2' onClick={cycleRecentAndFavourite}>
                         Recent
                     </button>
                 </div>  
 
-                <div className='recent-card w-11/12 md:w-6/12 lg:w-2/6 lg:mx-0 mx-auto my-5 md:my-auto lg:my-auto p-5 lg:p-10 h-[23rem] lg:h-[27rem] bg-colors-primary rounded-lg shadow-2xl border-2 border-colors-accent'>
+                <div className='recent-card w-11/12 md:w-6/12 lg:w-2/6 lg:mx-0 mx-auto my-5 md:my-auto lg:my-auto p-5 lg:p-10  min-h-[20rem] h-[30rem] lg:h-[27rem] bg-colors-primary rounded-lg shadow-2xl border-2 border-colors-accent'>
                     <h3 className='h-10 w-full mt-auto -mb-1 py-1 px-5 tracking-widest text-lg  text-colors-text2 font-light bg-colors-accent rounded-t-md'>Recent
                     </h3>
-                    <div id='added-color' className='w-full h-[80%] lg:h-[87%] border-2 border-colors-accent rounded-md rounded-t-none overflow-y-scroll scroll-smooth bg-colors-secondary bg-opacity-80'>
+                    <div id='added-color' className='w-full h-[85%] lg:h-[87%] border-2 border-colors-accent rounded-md rounded-t-none overflow-y-scroll scroll-smooth bg-colors-secondary bg-opacity-80'>
                         {recentColor.map((e,index)=>
                             <RecentCard
                                 key={index}
@@ -294,7 +297,7 @@
                             />
                         )}
                     </div>
-                    <button id='favouriteBtn' className='btnCard z-10 btn h-8 lg:h-8 w-24 lg:w-32 my-1 lg:my-2 ml-[35%] tracking-widest border-2 border-colors-accent rounded-md bg-colors-secondary text-colors-text2' onClick={cycleRecentAndFavourite}>
+                    <button id='favouriteBtn' className='btnCard z-10 btn min-h-10 lg:h-8 w-24 lg:w-32 my-1 ml-[35%] tracking-widest border-2 border-colors-accent rounded-md bg-colors-secondary text-colors-text2' onClick={cycleRecentAndFavourite}>
                         Favourite
                     </button>
                 </div>

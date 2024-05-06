@@ -1,7 +1,7 @@
 import { CircleMinus, ArrowLeftRight } from 'lucide-react';
 import { CircleChevronUp } from 'lucide-react';
 import { CircleChevronDown } from 'lucide-react';
-import './index.css';
+import '../index.css';
 
 function Card (prop) {
 
