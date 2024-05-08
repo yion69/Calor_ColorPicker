@@ -124,7 +124,7 @@ export default class RandomPalette extends React.Component {
 
     render(){
         return(
-            <div className=" h-dvh lg:h-[73.6%] flex flex-col lg:flex-row place-items-center place-content-center space-x-0 lg:space-x-5">
+            <div className=" h-dvh lg:h-[73.6%] flex flex-col lg:flex-row place-items-center place-content-center space-x-0 lg:space-x-5 bg-colors-background">
                 <div id="main" className="h-[90%] lg:h-[80%] w-[90%] lg:w-1/3 bg-colors-primary border-[3px] border-colors-accent rounded-md" style={{display: 'block'}}>
                     <div 
                         id="randomDisplay"
@@ -142,7 +142,7 @@ export default class RandomPalette extends React.Component {
                             <p className="text-2xl text-colors-text2 font-light">{this.state.color.name}</p>
                         </>
                     }
-                        <div id="spinner" className="absolute flex place-content-center h-[400px] w-[350px] overflow-hidden">
+                        <div id="spinner" className="absolute flex place-content-center h-[400px] lg:h-[300px] w-[350px] lg:w-400 overflow-hidden">
                             <div className="relative flex place-content-center h-full mx-auto rounded-md">
                                 <Spinner />
                             </div>
