@@ -7,7 +7,7 @@
 
     function ColorDisplay () {
         
-        let [color, setColor] = useState('#FFFFFF');
+        let [color, setColor] = useState('#000000');
         let [colorRgb, setColorRgb] = useState('255,255,255')
         let [colorHsl, setColorHsl] = useState( 0 + '°,' + 0 + '%,' + 0 + '%')
         let [addedColor, setAddedColor] = useState(['#000000',]);

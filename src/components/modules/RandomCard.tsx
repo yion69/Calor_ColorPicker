@@ -28,7 +28,6 @@ export default class RandomCard extends React.Component<Props, State> {
                     <p className='-mb-1'>{this.state.cName}</p>
                     <p className=''>{this.state.color}</p>
                 </div>
-                
             </div>
          );
     }
