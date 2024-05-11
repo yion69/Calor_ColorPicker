@@ -23,7 +23,7 @@ function SearchBar (prop) {
             }
             else{
                 event.target.placeholder = "Please input comma between each value";
-                //make a breadcrumb to let the user know abt the comma
+
             }
         }
         if(select.value === 'hsl'){
@@ -98,7 +98,7 @@ function SearchBar (prop) {
 
     return(
         <div className="searchbar z-20 fixed flex place-items-center -top-32 " style={{backgroundColor: "rgba(0,0,0,0.7)"}}>
-            <div className="flex flex-col h-[15%] w-[90%] mt-10 mx-auto bg-colors-primary border-2 border-colors-accent rounded-lg">
+            <div className="flex flex-col h-[15%] w-[90%] mt-48 mx-auto bg-colors-primary border-2 border-colors-accent rounded-lg">
                 <button onClick={removeSearchBar}>
                     <XCircle 
                         size={25}

@@ -71,7 +71,7 @@ function RandomScheme () {
     }
 
     return (
-        <div className='h-dvh lg:h-[73.5%] pt-5
+        <div className='h-dvh lg:h-[73.5%] pt-5 bg-colors-background
                         grid grid-cols-1 grid-rows-[90%,10%]'
         > 
             <div className='

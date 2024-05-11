@@ -1,3 +1,37 @@
+
+# CalorPicker
+
+A color picker app that can use features like randomly generating colors and creating color schemes. 
+
+Made with 
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+## Features
+
+- Search Colors
+- Random Colors
+- Generate Color Palatte
+
+
+
+## Acknowledgements
+
+ - [ColorApi](https://www.thecolorapi.com)
+
+
+## 🔗 Contact
+
+Name - Thuta Naing | thutanaing.personal@gmail.com
+
+Linkedin  - [Thuta Naing](www.linkedin.com/in/thuta-naing-83b5222b0) 
+
+Discord   - [yion69](https://discord.com/users/444166064398663680)
+
+Github: [yion](https://github.com/yion69)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
