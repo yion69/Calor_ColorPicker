@@ -124,7 +124,7 @@ export default class RandomPalette extends React.Component {
 
     render(){
         return(
-            <div className=" h-dvh lg:h-[73.6%] flex flex-col lg:flex-row place-items-center place-content-center space-x-0 lg:space-x-5 bg-colors-background">
+            <div className="h-dvh lg:h-[73.6%] flex flex-col lg:flex-row place-items-center place-content-center space-x-0 lg:space-x-5 bg-colors-background">
                 <div id="main" className="h-[90%] lg:h-[80%] w-[90%] lg:w-1/3 bg-colors-primary border-[3px] border-colors-accent rounded-md" style={{display: 'block'}}>
                     <div 
                         id="randomDisplay"

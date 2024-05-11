@@ -27,6 +27,20 @@ svg {
     background-color: #78716c;
 }
 
+/* Navigation Bar */
+.navbar li {
+    transition: transform 0.5s;
+}
+.navbar li:focus {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+@media (hover: hover) and (pointer: fine){
+    .navbar li:hover {
+        font-weight: bold;
+        transform: scale(1.2);
+    }
+}
 /* Display-ColorValues */
 #input-text-hex {
     display: block;

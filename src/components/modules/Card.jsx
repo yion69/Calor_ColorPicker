@@ -1,6 +1,4 @@
-import { CircleMinus, ArrowLeftRight } from 'lucide-react';
-import { CircleChevronUp } from 'lucide-react';
-import { CircleChevronDown } from 'lucide-react';
+import { CircleMinus, CircleChevronUp, CircleChevronDown } from 'lucide-react';
 import '../index.css';
 
 function Card (prop) {
@@ -19,11 +17,6 @@ function Card (prop) {
                 </span>
                 {value}
             </h3>
-
-            <button className='card w-6 h-9 -ml-1 md:ml-auto lg:ml-0 lg:mr-1 px-1 py-1' onClick={moveColorUp}>
-                <ArrowLeftRight className='mx-auto my-auto size-4 md:size-7 lg-size-9' />
-            </button>
-
             <button className='card w-6 h-9 ml-0 md:ml-auto lg:ml-2 lg:mr-1 px-1 py-1' onClick={moveColorUp}>
                 <CircleChevronUp className='mx-auto my-auto size-5 md:size-7 lg-size-9' />
             </button>
